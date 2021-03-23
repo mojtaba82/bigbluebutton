@@ -6,6 +6,7 @@ import ActionsDropdown from './actions-dropdown/component';
 import QuickPollDropdown from './quick-poll-dropdown/component';
 import AudioControlsContainer from '../audio/audio-controls/container';
 import JoinVideoOptionsContainer from '../video-provider/video-button/container';
+import SetStatusButtonContainer from '../emoji-status/container';
 import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions/container';
 import PresentationOptionsContainer from './presentation-options/component';
 
@@ -34,6 +35,8 @@ class ActionsBar extends PureComponent {
       isPollingEnabled,
       isThereCurrentPresentation,
       allowExternalVideo,
+      setEmojiStatus,
+      currentUser,
     } = this.props;
 
     const actionBarClasses = {};
@@ -94,6 +97,11 @@ class ActionsBar extends PureComponent {
             screenshareDataSavingSetting,
           }}
           />
+          {!amIPresenter
+            ? (
+              <SetStatusButtonContainer {...{ intl, setEmojiStatus, currentUser }} />
+            )
+            : null}
         </div>
         <div className={styles.right}>
           {isLayoutSwapped

@@ -10,6 +10,7 @@ import ActionsBar from './component';
 import Service from './service';
 import ExternalVideoService from '/imports/ui/components/external-video-player/service';
 import CaptionsService from '/imports/ui/components/captions/service';
+import UserListService from '/imports/ui/components/user-list/service';
 import {
   shareScreen,
   unshareScreen,
@@ -49,4 +50,6 @@ export default withTracker(() => ({
   isThereCurrentPresentation: Presentations.findOne({ meetingId: Auth.meetingID, current: true },
     { fields: {} }),
   allowExternalVideo: Meteor.settings.public.externalVideoPlayer.enabled,
+  setEmojiStatus: UserListService.setEmojiStatus,
+  currentUser: Service.currentUser(),
 }))(injectIntl(ActionsBarContainer));

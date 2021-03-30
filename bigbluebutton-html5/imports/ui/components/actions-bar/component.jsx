@@ -97,11 +97,7 @@ class ActionsBar extends PureComponent {
             screenshareDataSavingSetting,
           }}
           />
-          {!amIPresenter
-            ? (
-              <SetStatusButtonContainer {...{ intl, setEmojiStatus, currentUser }} />
-            )
-            : null}
+          <SetStatusButtonContainer {...{ intl, setEmojiStatus, currentUser }} />
         </div>
         <div className={styles.right}>
           {isLayoutSwapped

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import Button from '/imports/ui/components/button/component';
 import cx from 'classnames';
 import { styles } from './styles';
@@ -8,7 +8,7 @@ import { styles } from './styles';
 const propTypes = {
   toggleClick: PropTypes.func.isRequired,
   isRiseHand: PropTypes.bool.isRequired,
-  intl: intlShape.isRequired,
+//  intl: intlShape.isRequired,
 };
 
 class SetStatusButton extends PureComponent {
@@ -37,4 +37,4 @@ class SetStatusButton extends PureComponent {
 }
 
 SetStatusButton.propTypes = propTypes;
-export default SetStatusButton;
+export default injectIntl(SetStatusButton);

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
+import withShortcutHelper from '/imports/ui/components/shortcut-help/service';
 import Button from '/imports/ui/components/button/component';
 import cx from 'classnames';
 import { styles } from './styles';
@@ -8,7 +9,6 @@ import { styles } from './styles';
 const propTypes = {
   toggleClick: PropTypes.func.isRequired,
   isRiseHand: PropTypes.bool.isRequired,
-//  intl: intlShape.isRequired,
 };
 
 class SetStatusButton extends PureComponent {
@@ -17,6 +17,7 @@ class SetStatusButton extends PureComponent {
       intl,
       isRiseHand,
       toggleClick,
+      shortcuts,
     } = this.props;
 
     return (
@@ -31,10 +32,11 @@ class SetStatusButton extends PureComponent {
         icon="hand"
         size="lg"
         circle
+        accessKey={shortcuts.raisehand}
       />
     );
   }
 }
 
 SetStatusButton.propTypes = propTypes;
-export default injectIntl(SetStatusButton);
+export default withShortcutHelper(injectIntl(SetStatusButton),['raisehand']);

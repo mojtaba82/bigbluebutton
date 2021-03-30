@@ -100,6 +100,9 @@ public:
       openActions:
         accesskey: A
         descId: openActions
+      raiseHand:
+        accesskey: R
+        descId: raiseHand
     branding:
       displayBrandingArea: false
     connectionTimeout: 60000

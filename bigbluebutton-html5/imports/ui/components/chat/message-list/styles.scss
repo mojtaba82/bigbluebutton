@@ -25,25 +25,27 @@
 }
 
 .messageList {
-  @include scrollbox-vertical();
+  @include scrollbox-vertical(white, false);
+  background-color: #E5DDD5;
+  border: solid 2px #E5DDD5;
   flex-flow: column;
   flex-grow: 1;
   flex-shrink: 1;
   margin: 0 auto 0 0;
   right: 0 var(--md-padding-x) 0 0;
-  padding-top: 0;
+  padding: .5rem;
   width: 100%;
 
   [dir="rtl"] & {
     margin: 0 0 0 auto;
-    padding: 0 0 0 var(--md-padding-x);
+//    padding: 0 0 0 var(--md-padding-x);
   }
 
-  &:after {
-    content: "";
-    display: block;
-    height: var(--md-padding-x);
-  }
+//  &:after {
+//    content: "";
+//    display: block;
+//    height: var(--md-padding-x);
+//  }
 }
 
 .unreadButton {

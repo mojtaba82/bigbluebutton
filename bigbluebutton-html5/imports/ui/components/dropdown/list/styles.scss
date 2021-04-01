@@ -22,6 +22,10 @@
   }
 }
 
+:root {
+  --padding-menu: .5rem;
+}
+
 .verticalList {
   @extend %list;
   flex-direction: column;
@@ -63,10 +67,17 @@
   }
 
   .verticalList & {
-    padding: calc(var(--line-height-computed) / 3) 0;
+    padding: calc(var(--line-height-computed) / 3) var(--padding-menu);
+    border: solid 1px var(--color-border-item);
+    border-radius: var(--border-radius);
+    margin-bottom: 5px;
+
+   &:last-child {
+     margin-bottom: 0;
+   }
 
     @include mq($small-only) {
-      padding: calc(var(--line-height-computed) / 1.5) 0;
+      padding: calc(var(--line-height-computed) / 1.5) var(--padding-menu);
     }
   }
 
@@ -74,7 +85,7 @@
     padding: 0 calc(var(--line-height-computed) / 3);
 
     @include mq($small-only) {
-      padding: calc(var(--line-height-computed) / 1.5) 0;
+      padding: calc(var(--line-height-computed) / 1.5) var(--padding-menu);
     }
   }
 
@@ -107,7 +118,7 @@
 
       @include mq($small-only) {
         margin: 0;
-        padding: calc(var(--line-height-computed) / 1.5) 0;
+        padding: calc(var(--line-height-computed) / 1.5) var(--padding-menu);
         margin-left: calc((var(--line-height-computed) / 2) * -1);
         margin-right: calc((var(--line-height-computed) / 2) * -1);
         padding-left: calc(var(--line-height-computed) / 2);
@@ -137,6 +148,7 @@
   margin: 0 calc(var(--line-height-computed) / 2) 0 0;
   color: var(--color-text);
   flex: 0 0;
+  top: .3rem;
 
   [dir="rtl"] & {
     margin: 0 0 0 calc(var(--line-height-computed) / 2);

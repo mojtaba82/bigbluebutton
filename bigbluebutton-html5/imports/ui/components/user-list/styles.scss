@@ -63,16 +63,16 @@
   }
 
   &:hover {
-    @include highContrastOutline();
+//    @include highContrastOutline();
     background-color: var(--list-item-bg-hover);
   }
 
   &:active,
   &:focus {
-    @include highContrastOutline();
-    outline-style: solid;
-    background-color: var(--list-item-bg-hover);
-    box-shadow: inset 0 0 0 var(--border-size) var(--item-focus-border), inset 1px 0 0 1px var(--item-focus-border);
+//    @include highContrastOutline();
+    outline: none;
+//    background-color: var(--list-item-bg-hover);
+//    box-shadow: inset 0 0 0 var(--border-size) var(--item-focus-border), inset 1px 0 0 1px var(--item-focus-border);
   }
 }
 

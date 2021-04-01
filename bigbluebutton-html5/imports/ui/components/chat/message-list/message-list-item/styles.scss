@@ -10,9 +10,9 @@
   min-width: 12rem;
   font-size: var(--font-size-base);
   margin-bottom: calc(var(--line-height-computed)/2);
-  padding: 3px;
+  padding: .4rem;
   border-radius: var(--border-radius);
-  background-color: #FFF;
+  background-color: #e5e6ee;
 
   &:last-child {
     margin-bottom: 0 !important;
@@ -128,7 +128,7 @@
   margin: 0 0 0 calc(var(--line-height-computed) / 2);
   position: absolute;
   right: 0;
-  bottom: -.2rem;
+  bottom: -.3rem;
 
   [dir="rtl"] & {
     margin: 0 calc(var(--line-height-computed) / 2) 0 0;
@@ -151,7 +151,7 @@
   flex: 1;
   margin-top: calc(var(--line-height-computed) / 3);
   margin-bottom: 0;
-  color: var(--color-text);
+  color: #111;
   word-wrap: break-word;
 }
 

@@ -48,7 +48,7 @@
 .center,
 .right {
   > * {
-    margin: 0 var(--sm-padding-x);
+    margin: 0 .4rem;
 
     @include mq($small-only) {
       margin: 0 var(--sm-padding-y);

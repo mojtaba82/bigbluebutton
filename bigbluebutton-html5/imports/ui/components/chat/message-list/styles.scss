@@ -26,8 +26,6 @@
 
 .messageList {
   @include scrollbox-vertical(white, false);
-  background-color: #E5DDD5;
-  border: solid 2px #E5DDD5;
   flex-flow: column;
   flex-grow: 1;
   flex-shrink: 1;

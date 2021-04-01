@@ -175,8 +175,12 @@
   text-align: center;
   left: 0;
   right: 0;
-  font-size: 110%;
+  font-size: 125%;
   text-transform: capitalize;
+
+  & > [class^="icon-bbb-"] {
+    font-size: 150%;
+  }
 
   &,
   & > * {

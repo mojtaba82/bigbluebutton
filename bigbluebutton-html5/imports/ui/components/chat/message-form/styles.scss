@@ -9,6 +9,8 @@
   width: 100%;
   position: relative;
   margin-bottom: calc(-1 * var(--sm-padding-x));
+  padding-top: 1rem;
+  height: 5rem;
 }
 
 .wrapper {
@@ -49,10 +51,10 @@
 }
 
 .input {
-  @include inputFocus(var(--color-blue-light));
+ // @include inputFocus(var(--color-blue-light));
 
   flex: 1;
-  background: #fff;
+  background: #DDD;
   background-clip: padding-box;
   margin: 0;
   color: var(--color-text);
@@ -60,12 +62,12 @@
   padding: calc(var(--sm-padding-y) * 2.5) calc(var(--sm-padding-x) * 1.25);
   resize: none;
   transition: none;
-  border-radius: var(--border-radius);
+  border-radius: 2rem;
   font-size: var(--font-size-base);
   min-height: 2.5rem;
   max-height: 10rem;
-  border: 1px solid var(--color-gray-lighter);
-  box-shadow: 0 0 0 1px var(--color-gray-lighter);
+  border: 0px solid var(--color-blue-light);
+//  box-shadow: 0 0 0 1px var(--color-gray-lighter);
 
   &:disabled,
   &[disabled] {
@@ -75,13 +77,15 @@
   }
 
   &:hover {
-    @include highContrastOutline();
+//    @include highContrastOutline();
   }
 
   &:active,
   &:focus {
-    @include highContrastOutline();
-    outline-style: solid;
+//    @include highContrastOutline();
+    outline: none;
+    box-shadow: 0 0 0 var(--border-size) var(--color-blue-light), inset 0 0 0 1px var(--color-primary);
+    
   }
 }
 

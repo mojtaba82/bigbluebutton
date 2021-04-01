@@ -6,6 +6,12 @@
   --min-modal-height: 20rem;
 }
 
+.button {
+  & i {
+    font-size: 150% !important;
+  }
+}
+
 .modal {
   @extend .modal;
   padding: var(--jumbo-padding-y);

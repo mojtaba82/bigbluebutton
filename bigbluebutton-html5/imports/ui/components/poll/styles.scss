@@ -50,6 +50,9 @@
     &:hover {
         background-color: var(--color-white);
     }
+    &:focus {
+      box-shadow: none;
+    }
   }
 
 .customBtn {

@@ -37,13 +37,13 @@
     right: var(--rtl-content-offset);
   }
 
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
+//  &:after,
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    width: 0;
+//    height: 0;
+//  }
 
   &[aria-expanded="false"] {
     display: none;
@@ -302,7 +302,7 @@
 .top-left, [dir="rtl"] .top-right {
   @extend %down-caret;
   @extend %horz-right-caret;
-  min-width: 11.5rem;
+  min-width: 13.5rem;
 
   @include mq($small-only) {
     width: auto;
@@ -333,7 +333,7 @@
 .bottom-right, [dir="rtl"] .bottom-left  {
   @extend %up-caret;
   @extend %horz-left-caret;
-  min-width: 10rem;
+  min-width: 12rem;
 
   @include mq($small-only) {
     width: auto;

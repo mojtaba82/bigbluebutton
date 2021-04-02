@@ -6,11 +6,11 @@
 }
 
 .item {
-  display: inline-block;
-  min-width: 12rem;
+  display: table;
   font-size: var(--font-size-base);
   margin-bottom: calc(var(--line-height-computed)/2);
-  padding: .4rem;
+  padding: .4rem .4rem .6rem;
+  
   border-radius: var(--border-radius);
   background-color: #e5e6ee;
 
@@ -128,7 +128,7 @@
   margin: 0 0 0 calc(var(--line-height-computed) / 2);
   position: absolute;
   right: 0;
-  bottom: -.3rem;
+  bottom: -.6rem;
 
   [dir="rtl"] & {
     margin: 0 calc(var(--line-height-computed) / 2) 0 0;
